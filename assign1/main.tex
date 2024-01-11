@@ -56,18 +56,16 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \begin{enumerate}
-\item[Question:] 
-A bat emits ultrasonic sound of frequency $1000 kHz$ in air. If the sound meets a water surface, what is the wavelength of\\[0pt] \brak the reflected sound \\[0pt]
+\item A bat emits ultrasonic sound of frequency $1000 kHz$ in air. If the sound meets a water surface, what is the wavelength of\\[0pt] \brak the reflected sound \\[0pt]
 \brak{b} the transmitted sound?\\
 Speed of sound in air is $340 ms^{-1}$ and in water is $1486 ms^{-1}$.
-\item[Solution:]
+\item[Soln:]
 
 As we know that the frequency of sound does not change with medium, So the frequency in water is equal to in air.\\
 As,
 \begin{align}
 wavelength\brak{\lambda}\cdot frequency\brak{f}=speed\brak{v}
 \end{align}
-
 \begin{table}[htbp]
 \centering
 \input{tables/table1}
@@ -97,6 +95,39 @@ And similarly,
 \caption{\normalsize $Results$}
 \label{tab:parameters}
 \end{table}
-
+The general equation of a sound wave is
+\begin{align}
+S=S_m \sin (\omega t-kx)
+\end{align}
+where
+\begin{align}
+\omega = 2\pi f\\
+Maximum \:displacement=S_m\\
+k=\frac{\lambda}{2\pi}  
+\end{align}
+So angular frequency = $2\pi f$\\
+\begin{align}
+    \omega=2\cdot \pi f\\
+    \omega=2\cdot 3.14 \cdot 10^{6}\\
+    \omega=6.28 \cdot 10^{6}
+\end{align}
+The value of wave number in air ($K_a$)= $\dfrac{\lambda_a}{2 \pi}$
+\begin{align}
+    K_a=\left(\dfrac{0.34\times 10^{-3}}{2 \times 3.14 }\right)\\
+    K_a=54 \times 10^{-6} \: m^{-1}
+\end{align}
+The value of wave number in water ($K_w$)= $\dfrac{\lambda_w}{2 \pi}$
+\begin{align}
+    K_w= \left(\frac{1.486 \times 10^{-3}}{2 \times 3.14}\right)\\
+    K_w=236 \times 10^{-6} \: m^{-1}
+\end{align}
+Equation of sound wave in air is
+\begin{align}
+    S=S_m \sin (6.28 \times 10^{6} t-54\times 10^{-6}x)
+\end{align}
+Equation of sound wave in water is 
+\begin{align}
+    S=S_w \sin (6.28 \time 10^{6}t - 236 \times 10^{-6}x)
+\end{align}
 \end{enumerate}
 \end{document}
