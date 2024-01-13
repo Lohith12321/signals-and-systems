@@ -1,0 +1,15 @@
+\begin{tabular}{|c|p{2cm}|c|c|}
+\hline 
+\textbf{Parameter}  &\textbf{Description} &\textbf{Value} &\textbf{Formulae} \\
+\hline
+$v$ & Frequency of sound &$1000KHz$  &\\
+\hline
+$v_a$ & Speed of sound in air &$340 ms^{-1}$ &\\
+\hline
+$v_w $ & Speed of sound in water &$ 1486 ms^{-1}$ & \\ 
+\hline
+$\lambda_a$& Wavelength of sound in air & & $v_a/\text{f}$\\
+\hline
+$\lambda_w$ & Wavelength of sound in water&  & $v_w/\text{f}$ \\
+\hline
+\end{tabular}
