@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  17 JAN 2024 19:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  20 JAN 2024 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1371,6 +1371,10 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
+
+ []
+
 (./tables/table1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 []|\OT1/txr/m/n/9 Frequency of
@@ -1396,20 +1400,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
 []|\OT1/txr/m/n/9 Wavenumber
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
-
+) (./tables/table3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+[]|\OT1/txr/m/n/9 Frequency of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
-
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+[]|\OT1/txr/m/n/9 Amplitude of
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-] (./tables/table2.tex
+) (./tables/table2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\OT1/txr/m/n/9 Wave length
  []
@@ -1430,31 +1431,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
-
-Underfull \hbox (badness 2653) in paragraph at lines 147--149
-\OT1/txr/m/n/12 can be in-ter-preted in a phys-i-cal man-ner
+(./tables/table4.tex)
+Overfull \hbox (61.67845pt too wide) in paragraph at lines 2--137
+ [][] 
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 147--149
-\OT1/txr/m/n/12 by the prop-er-ties of the medium through
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<graph.png, id=7, 462.528pt x 346.896pt>
+File: graph.png Graphic file (type png)
+<use graph.png>
+Package pdftex.def Info: graph.png  used on input line 146.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
+] [2
 
- []
-
-[2] (./main.aux)
+ <./graph.png>]
+(./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1462,13 +1474,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39364 strings out of 476091
- 907059 string characters out of 5794082
- 1883330 words of memory out of 5000000
- 58944 multiletter control sequences out of 15000+600000
- 584603 words of font info for 178 fonts, out of 8000000 for 9000
+ 39379 strings out of 476091
+ 907375 string characters out of 5794082
+ 1890330 words of memory out of 5000000
+ 58957 multiletter control sequences out of 15000+600000
+ 582796 words of font info for 176 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,13n,96p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,15n,96p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1477,10 +1489,10 @@ fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 61629 bytes).
+Output written on main.pdf (2 pages, 98002 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

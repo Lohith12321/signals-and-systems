@@ -59,22 +59,23 @@
 \begin{enumerate}
 \item A bat emits ultrasonic sound of frequency $1000 kHz$ in air. If the sound meets a water surface, what is the wavelength of\\[0pt] \brak the reflected sound \\[0pt]
 \brak{b} the transmitted sound?\\
-Speed of sound in air is $340 ms^{-1}$ and in water is $1486 ms^{-1}$.
+Speed of sound in air is $340 ms^{-1}$ and in water is $1486 ms^{-1}$.\\
 \item[Soln:]
 
-As we know that the frequency of sound does not change with medium, So the frequency in water is equal to in air.\\
-As,
-\begin{align}
-wavelength\brak{\lambda}\cdot frequency\brak{\text{f}}=speed\brak{\text{v}}
-\end{align}
+
 \setlength{\intextsep}{2pt}
-\begin{table}[htbp]
+\begin{table}[h!]
 \centering
 \input{tables/table1}
 \vspace{0.5cm}
 \caption{\normalsize $Parameters$}
 \label{tab:parameters}
 \end{table}
+
+The frequency of sound does not change with medium. And,
+\begin{align}
+{\lambda}\cdot {\text{f}}={\text{v}}
+\end{align}
 
 So,
 \begin{align}
@@ -83,7 +84,6 @@ So,
 \lambda_w=1.486mm    
 \end{align}
 
-And similarly,
 \begin{align}
 \lambda_a=v_a/\mathrm{f}\\
 \lambda_a=340/1000KHz\\
@@ -94,67 +94,62 @@ The general equation of a sound wave is
 \begin{align}
 y\brak{t}=A \sin (2\pi\text{f} t-kx)
 \end{align}
-where
-\begin{align}
-\text{f} = Frequency of sound
-\end{align}
-Frequency of sound relates to the pitch of that sound, higher the frequency higher the pitch and lower the frequency lower the pitch. For example voice frequency of males and females are different in their adulthood (Generally females have a higher frequency of voice than males) and the frequency of small kids are even more than that.\\
-So,
-\begin{align}
-    2\pi \text{f} =2\times 3.14 \times 10^{6}\\
-    2\pi \text{f}=6.28 \times 10^{6}
-\end{align}
-\begin{align}
-A= \text{Amplitude} 
-\end{align}
-Amplitude of sound refers to the loudness of sound $i.e.$ intensity of the sound. Higher the amplitude higher the loudness and lower the amplitude lower loudness. The SI unit amplitude is meter $\brak{m}$
-\begin{align}
-k=\frac{\lambda}{2\pi}  
-\end{align}
-$K$ is called as wave numbers, it gives an idea about hove many waves are present in an unit length (here it is a meter), So higher the wave length lower the wave number and lower the wavelength higher the wave number. \\
 
-Physically, the wavelength of a sound wave can be visualized as the distance between two successive compression's (high-pressure regions) or rarefaction's (low-pressure regions) in the air or any other medium through which the sound is propagating.\\
+\begin{table}[h!]
+\centering
+\input{tables/table3}
+\vspace{0.5cm}
+\label{tab:Parameters}
+\end{table}
 
-When $y\brak{t}$ incident sound wave hits the water, it undergoes transmission into the medium while concurrently experiencing reflection at the air-water interface,leading to a combination of transmitted and reflected waves.\\
-The value of wave number in air ($K_a$)= $\dfrac{\lambda_a}{2 \pi}$
+
 \begin{align}
     K_a=\left(\dfrac{0.34\times 10^{-3}}{2 \times 3.14 }\right)\\
     K_a=54 \times 10^{-6} \: m^{-1}
 \end{align}
-The value of wave number in water ($K_w$)= $\dfrac{\lambda_w}{2 \pi}$
 \begin{align}
     K_w= \left(\frac{1.486 \times 10^{-3}}{2 \times 3.14}\right)\\
     K_w=236 \times 10^{-6} \: m^{-1}
 \end{align}\\
 \setlength{\intextsep}{2pt}
-\begin{table}[htbp]
+\begin{table}[h!]
 \centering
 \input{tables/table2}
 \vspace{0.5cm}
 \caption{\normalsize $Results$}
 \label{tab:parameters}
 \end{table}
-Equation of sound wave in air is
 \begin{align}
-    y \brak{t}=A \sin (6.28 \times 10^{6} t-54\times 10^{-6}x)
+    y \brak{t}_{Air}=A \sin (6.28 \times 10^{6} t-54\times 10^{-6}x)
 \end{align}
-Equation of sound wave in water is 
 \begin{align}
-    y \brak{t}=A \sin (6.28 \time 10^{6}t - 236 \times 10^{-6}x)
+    y \brak{t}_{Water}=A \sin (6.28 \time 10^{6}t - 236 \times 10^{-6}x)
 \end{align}\\
 \\
-\section*{\Large Physical interpretation of sound speed}
-The speed of a sound wave in a medium can be interpreted in a physical manner without directly referencing its frequency and wavelength. The speed of sound is determined by the properties of the medium through which it travels, primarily its density (
-$\rho$) and elasticity.\\
 
-The general formula for the speed of sound in a medium is given by:
-$$\text{v}=\sqrt{ \frac{\gamma \cdot P}{\rho}}$$
-where:
-\begin{itemize}
-    \item v is the speed of sound
-    \item $\gamma$ is the adiabatic index or ratio of specific heats
-    \item $P$ is the pressure of the medium
-    \item $\rho$ is the density of the medium.
-\end{itemize}
 \end{enumerate}
+
+
+\begin{table}[h!]
+\centering
+\input{tables/table4}
+\vspace{0.5cm}
+\caption{\normalsize General Equation of speed of sound}
+\label{tab:General Equation of speed of sound}
+\end{table}
+
+
+
+\begin{figure}[h]
+    \centering
+
+\includegraphics[width=\columnwidth]{graph.png}
+
+\begin{center}
+    \caption{A Sound wave}
+\end{center}
+    
+    \label{fig:Sound Wave}
+\end{figure}
+
 \end{document}
