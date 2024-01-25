@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  23 JAN 2024 02:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  25 JAN 2024 06:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,14 +1209,13 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 5.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 45.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 45.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -1327,6 +1326,8 @@ LaTeX Info: Redefining \ohm on input line 45.
 Package gensymb Info: Using \textohm for \ohm on input line 45.
 Package gensymb Info: Using \textmu for \micro on input line 45.
 Package hyperref Info: Link coloring OFF on input line 45.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1367,7 +1368,7 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 File: ts1txr.fd 2000/12/15 v3.1
 )
 (./tables/table1.tex)
-Overfull \hbox (11.33823pt too wide) in paragraph at lines 2--69
+Overfull \hbox (15.95619pt too wide) in paragraph at lines 2--69
  [][] 
  []
 
@@ -1379,19 +1380,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ] (./main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39340 strings out of 476091
- 906845 string characters out of 5794082
- 1871330 words of memory out of 5000000
+ 39346 strings out of 476091
+ 906899 string characters out of 5794082
+ 1873330 words of memory out of 5000000
  58941 multiletter control sequences out of 15000+600000
  582796 words of font info for 176 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1405,7 +1400,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 50666 bytes).
+Output written on main.pdf (1 page, 50769 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
