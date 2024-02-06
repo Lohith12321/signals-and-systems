@@ -1,3 +1,4 @@
+% \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -59,7 +60,7 @@
 \item[1.]
 Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term is 149.
 \item[Ans:]
-Let the series be $$a(0),a(1),a(2),a(3),\ldots,a(n)$$
+Let the series be $$x(0),x(1),x(2),x(3),\ldots,x(n)$$
 
 \begin{table}[h!]
 \centering
@@ -71,31 +72,46 @@ Let the series be $$a(0),a(1),a(2),a(3),\ldots,a(n)$$
 Now, the $22^{nd}$ term means $a(21)$, so
 
 \begin{align}
-a(21) &= a(0)+nd\\
-149 &= a(0)+21(7)\\
-a(0) &= 149-147\\
-a(0) &= 2    
+x(21) &= x(0)+nd\\
+149 &= x(0)+21(7)\\
+x(0) &= 2    
 \end{align}
 
-As
+The general term is $x(n)=2+7d$
+The z transform of the general term is 
 \begin{align}
-S(n) &= \left(\frac{n+1}{2}\right) (a(0)+nd)    
+x(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
+&=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
+&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2}
+\end{align}
+On convolution for finding the sum
+\begin{align}
+    y(n)&=x(n)\ast u(n)\\
+    \implies y(z)&=x(z)\cdot u(n)\\
+    \implies y(z)&=\left[\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}\right] \cdot \frac{1}{{1-z^{-1}}}\\
+    \implies y(z)&= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}
+\end{align}
+Using Contour integration to find the inverse z-transform,
+\begin{align}
+    y(n)&=\oint_c y(z)\cdot z^{n-1}dz\\
+    y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
+\end{align}
+We can observe there are three poles and thus m = 3,
+\begin{align}
+    R&=\frac{1}{\brak{n-1}!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}}\brak{\brak{z-a}^mf\brak z}\\
+    &=\frac{1}{2!}\lim_{z \to 1} \frac{d^2}{dz^2} \brak{\brak{z-1}^3\cdot \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot \brak{z^{20}}}\\
+    &=\frac{1}{2}\brak{1012+2310}\\
+    \implies R&=1661
 \end{align}
 
-So, 
-\begin{align}
-S(21)&=\left(\frac{21+1}{2}\right)(2\times2+21\times7)\\
-S(21)&=11\times151\\
-S(21)&=1661
-\end{align}
 
 Python code for finding the sum of terms of the AP:
 \begin{lstlisting}
-a=2
+x=2
 n=21
 d=7
-s=((n+1)/2)*(2*a+n*d)
-print("The sum of 22 terms is ",s)
+y=((n+1)/2)*(2*a+n*d)
+print("The sum of 22 terms is ",y)
 \end{lstlisting}
 
 \begin{table}[h!]
@@ -105,34 +121,6 @@ print("The sum of 22 terms is ",s)
 \caption{\normalsize Results}
 \end{table}
 
-By differentiation property,
-\begin{align}
-    n\brak{n} &\overset{z} \iff (-z)\frac{dX(z)}{dz}\\
-    \implies nu(n) &\overset{z}\iff \frac{z^{-1}}{(1-z^{-1})^2}, |z|>1 \\
-    \implies n^{2}u(n) &\overset{z}\iff \frac{z^{-1}\brak{z^{-1}+1}}{\brak{1-z^{-1}}^3}, |z|>1
-\end{align}
 
-For the sequence \(x(n)\), the sum of the first \(n + 1\) terms can be expressed as
-\begin{align}
-y(z) &= \sum_{n=-\infty}^{n=\infty} a(n)\cdot z^{-n}\\
-X(z) &= \sum_{n=0}^{n=\infty}\left(\frac{n+1}{2}\right)(2\brak{0}+nd)\cdot n\cdot z^{-n}
-\end{align}
-
-\begin{align}
-    X(z) &= 2x(0)U(z) - 2x(0)z\frac{dU(z)}{dz}+dz^2\frac{d^2U(z)}{dz^2} 
-\end{align}
-\begin{align}
-\therefore X(z) &= \frac{z^{-1}\brak{d-x(0)}+x(0)}{2\brak{\brak{
-1-z^{-1}}^3}}, {z\in \mathbb{C}:|z|>1} 
-\end{align}
-For the $(n+1)^{th}$ term in the progression,
-\begin{align}
-    y(n) &= y(0)+nd\\
-    n\cdot u(n) &\overset{z}\iff \frac{z^{-1}}{\brak{1-z^{-1}}^{-2}}\\
-    Y(z) &= \sum_{n=-\infty}^{n=\infty}y(n)\times z^{-n}\\
-    Y(z) &= \sum_{n=-\infty}^{n=\infty}\brak{y(0)+nd}u(n)\cdot z^{-n}\\
-    Y(z) &= y(0)U(z)-zd\frac{dU(z)}{dz}\\
-    \therefore Y(z) &= \frac{y(0)+\brak{d-y(0)}z^{-1}}{\brak{1-z^{-1}}^2}, {z \in \mathbb{C}: |z|>1}
-\end{align}
 \end{enumerate}
 \end{document}
