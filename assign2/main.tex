@@ -60,7 +60,6 @@
 \item[1.]
 Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term is 149.
 \item[Ans:]
-Let the series be $$x(0),x(1),x(2),x(3),\ldots,x(n)$$
 
 \begin{table}[h!]
 \centering
@@ -69,32 +68,35 @@ Let the series be $$x(0),x(1),x(2),x(3),\ldots,x(n)$$
 \caption{\normalsize Parameters}
 \end{table}
 
-Now, the $22^{nd}$ term means $a(21)$, so
+Now, the $22^{nd}$ term means $x(21)$, so
 
 \begin{align}
-x(21) &= x(0)+nd\\
-149 &= x(0)+21(7)\\
-x(0) &= 2    
+X(21) &= X(0)+nd\\
+149 &= X(0)+21(7)\\
+X(0) &= 2    
 \end{align}
 
-The general term is $x(n)=2+7d$
+The general term is $X(n)=2+7n$
 The z transform of the general term is 
 \begin{align}
-x(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
+X(z)&= \frac{X(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
 &=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
 &=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2}
 \end{align}
 On convolution for finding the sum
 \begin{align}
-    y(n)&=x(n)\ast u(n)\\
-    \implies y(z)&=x(z)\cdot u(n)\\
-    \implies y(z)&=\left[\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}\right] \cdot \frac{1}{{1-z^{-1}}}\\
-    \implies y(z)&= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}
+    Y(n)=X(n)\ast U(n)
+\end{align}
+On z-transform, 
+\begin{align}
+Y(z)&=X(z)\cdot U(n)\\
+    &=\brak{\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}} \cdot \frac{1}{{1-z^{-1}}}\\
+  \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}
 \end{align}
 Using Contour integration to find the inverse z-transform,
 \begin{align}
-    y(n)&=\oint_c y(z)\cdot z^{n-1}dz\\
-    y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
+    Y(n)&=\oint_c y(z)\cdot z^{n-1}dz\\
+    Y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
 \end{align}
 We can observe there are three poles and thus m = 3,
 \begin{align}
@@ -104,22 +106,28 @@ We can observe there are three poles and thus m = 3,
     \implies R&=1661
 \end{align}
 
-
-Python code for finding the sum of terms of the AP:
-\begin{lstlisting}
-x=2
-n=21
-d=7
-y=((n+1)/2)*(2*x+n*d)
-print("The sum of 22 terms is ",y)
-\end{lstlisting}
-
 \begin{table}[h!]
 \centering
 \input{tables/table2}
 \vspace{0.5cm}
 \caption{\normalsize Results}
 \end{table}
+
+
+\begin{figure}[h]
+    \centering  
+
+\includegraphics[width=\columnwidth]{graph.png}
+
+\begin{center}
+    \caption{Prgression}
+\end{center}
+    
+    \label{fig:Sound Wave}
+\end{figure}
+
+
+
 
 
 \end{enumerate}
