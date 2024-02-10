@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  7 FEB 2024 06:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  10 FEB 2024 06:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1379,12 +1379,20 @@ Overfull \hbox (5.91656pt too wide) detected at line 107
  []
 
 (./tables/table2.tex)
-<graph.png, id=7, 462.528pt x 346.896pt>
-File: graph.png Graphic file (type png)
-<use graph.png>
-Package pdftex.def Info: graph.png  used on input line 120.
+<generalterm.png, id=7, 462.528pt x 346.896pt>
+File: generalterm.png Graphic file (type png)
+<use generalterm.png>
+Package pdftex.def Info: generalterm.png  used on input line 120.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<sumplot.png, id=9, 462.528pt x 346.896pt>
+File: sumplot.png Graphic file (type png)
+<use sumplot.png>
+Package pdftex.def Info: sumplot.png  used on input line 133.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1393,16 +1401,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] [2
 
- <./graph.png>]
-(./main.aux)
+ <./generalterm.png> <./sumplot.png>] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39361 strings out of 476091
- 906993 string characters out of 5794082
+ 39371 strings out of 476091
+ 907162 string characters out of 5794082
  1887330 words of memory out of 5000000
- 58947 multiletter control sequences out of 15000+600000
+ 58954 multiletter control sequences out of 15000+600000
  581480 words of font info for 174 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,11n,96p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1414,10 +1424,10 @@ onts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 65086 bytes).
+Output written on main.pdf (2 pages, 83746 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

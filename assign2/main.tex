@@ -71,15 +71,15 @@ Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term i
 Now, the $22^{nd}$ term means $x(21)$, so
 
 \begin{align}
-X(21) &= X(0)+nd\\
-149 &= X(0)+21(7)\\
-X(0) &= 2    
+x(21) &= x(0)+nd\\
+149 &= x(0)+21(7)\\
+x(0) &= 2    
 \end{align}
 
-The general term is $X(n)=2+7n$
+The general term is $x(n)=2+7n$
 The z transform of the general term is 
 \begin{align}
-X(z)&= \frac{X(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
+X(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
 &=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
 &=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2}
 \end{align}
@@ -117,17 +117,27 @@ We can observe there are three poles and thus m = 3,
 \begin{figure}[h]
     \centering  
 
-\includegraphics[width=\columnwidth]{graph.png}
+\includegraphics[width=\columnwidth]{generalterm.png}
 
 \begin{center}
-    \caption{Prgression}
+    \caption{Sequence}
 \end{center}
     
     \label{fig:Sound Wave}
 \end{figure}
 
 
+\begin{figure}[h]
+    \centering  
 
+\includegraphics[width=\columnwidth]{sumplot.png}
+
+\begin{center}
+    \caption{Sum of terms}
+\end{center}
+    
+    \label{fig:}
+\end{figure}
 
 
 \end{enumerate}
