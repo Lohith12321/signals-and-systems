@@ -57,9 +57,9 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \begin{enumerate}
-\item[1.]
+\item
 Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term is 149.
-\item[Ans:]
+\solution
 
 \begin{table}[h!]
 \centering
@@ -83,19 +83,21 @@ X(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
 &=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
 &=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2}
 \end{align}
+Region of convergence: $\brak{z^{-1}}\neq 1$\\
 On convolution for finding the sum
 \begin{align}
-    Y(n)=X(n)\ast U(n)
+    y(n)=x(n)\ast u(n)
 \end{align}
 On z-transform, 
 \begin{align}
-Y(z)&=X(z)\cdot U(n)\\
+Y(z)&=X(z)\cdot U(z)\\
     &=\brak{\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}} \cdot \frac{1}{{1-z^{-1}}}\\
   \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}
 \end{align}
+Region of convergence: $\brak{z^{-1}}\neq 1$\\
 Using Contour integration to find the inverse z-transform,
 \begin{align}
-    Y(n)&=\oint_c y(z)\cdot z^{n-1}dz\\
+    Y(z)&=\oint_c y(z)\cdot z^{n-1}dz\\
     Y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
 \end{align}
 We can observe there are three poles and thus m = 3,
