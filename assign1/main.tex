@@ -2,6 +2,7 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amssymb}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -29,7 +30,6 @@
 \usepackage{ifthen}                                           
 \usepackage{lscape}
 \usepackage{pgfplots}
-
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -47,8 +47,8 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{NCERT-Analog-11.15-6}
-\author{EE22BTECH11004 - Allu lohith}
+\title{NCERT Discrete-10.5.3-7}
+\author{EE22BTECH11004 - Allu Lohith}
 
 \maketitle
 \newpage
@@ -57,99 +57,76 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \begin{enumerate}
-\item A bat emits ultrasonic sound of frequency $1000 kHz$ in air. If the sound meets a water surface, what is the wavelength of\\[0pt] \brak the reflected sound \\[0pt]
-\brak{b} the transmitted sound?\\
-Speed of sound in air is $340 ms^{-1}$ and in water is $1486 ms^{-1}$.\\
-\item[Soln:]
+\item
+Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term is 149.
+\solution
 
-
-\setlength{\intextsep}{2pt}
 \begin{table}[h!]
 \centering
 \input{tables/table1}
 \vspace{0.5cm}
-\caption{\normalsize $Parameters$}
-\label{tab:parameters}
+\caption{\normalsize Parameters}
 \end{table}
 
-The frequency of sound does not change with medium. And,
+Now, the $22^{nd}$ term means $x(21)$, so
+
 \begin{align}
-{\lambda}\cdot {\text{f}}={\text{v}}
+x(21) &= x(0)+nd\\
+149 &= x(0)+21(7)\\
+x(0) &= 2    
 \end{align}
 
-So,
+The general term is $x(n)=2+7n$
+The z transform of the general term is 
 \begin{align}
-\lambda_w=v_w/ \text{f}\\
-\lambda_w=1486/1000KHz\\
-\lambda_w=1.486mm    
+X(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
+&=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
+&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} \hspace{1mm}; \quad \brak{z^{-1}}\neq 1\\
+\end{align}
+On convolution for finding the sum
+\begin{align}
+    y(n)=x(n)\ast u(n)
+\end{align}
+On z-transform, 
+\begin{align}
+Y(z)&=X(z)\cdot U(z)\\
+    &=\brak{\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}} \cdot \frac{1}{{1-z^{-1}}}\\
+  \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3} \hspace{1mm}; \quad \brak{z^{-1}}\neq 1\\
+\end{align}
+Using Contour integration to find the inverse z-transform,
+\begin{align}
+    Y(z)&=\oint_c y(z)\cdot z^{n-1}dz\\
+    Y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
+\end{align}
+We can observe there are three poles and thus m = 3,
+\begin{align}
+    R&=\frac{1}{\brak{n-1}!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}}\brak{\brak{z-a}^mf\brak z}\\
+    &=\frac{1}{2!}\lim_{z \to 1} \frac{d^2}{dz^2} \brak{\brak{z-1}^3\cdot \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot \brak{z^{20}}}\\
+    &=\frac{1}{2}\brak{1012+2310}\\
+    \implies R&=1661
 \end{align}
 
-\begin{align}
-\lambda_a=v_a/\mathrm{f}\\
-\lambda_a=340/1000KHz\\
-\lambda_a=0.34mm    
-\end{align}
-
-The general equation of a sound wave is
-\begin{align}
-y\brak{t}=A \sin (2\pi\text{f} t-kx)
-\end{align}
-
-\begin{table}[h!]
-\centering
-\input{tables/table3}
-\vspace{0.5cm}
-\label{tab:Parameters}
-\end{table}
-
-
-\begin{align}
-    K_a=\left(\dfrac{0.34\times 10^{-3}}{2 \times 3.14 }\right)\\
-    K_a=54 \times 10^{-6} \: m^{-1}
-\end{align}
-\begin{align}
-    K_w= \left(\frac{1.486 \times 10^{-3}}{2 \times 3.14}\right)\\
-    K_w=236 \times 10^{-6} \: m^{-1}
-\end{align}\\
-\setlength{\intextsep}{2pt}
 \begin{table}[h!]
 \centering
 \input{tables/table2}
 \vspace{0.5cm}
-\caption{\normalsize $Results$}
-\label{tab:parameters}
-\end{table}
-\begin{align}
-    y \brak{t}_{Air}=A \sin (6.28 \times 10^{6} t-54\times 10^{-6}x)
-\end{align}
-\begin{align}
-    y \brak{t}_{Water}=A \sin (6.28 \time 10^{6}t - 236 \times 10^{-6}x)
-\end{align}\\
-\\
-
-\end{enumerate}
-
-
-\begin{table}[h!]
-\centering
-\input{tables/table4}
-\vspace{0.5cm}
-\caption{\normalsize General Equation of speed of sound}
-\label{tab:General Equation of speed of sound}
+\caption{\normalsize Results}
 \end{table}
 
 
 
 \begin{figure}[h]
-    \centering
+    \centering  
 
-\includegraphics[width=\columnwidth]{graph.png}
+\includegraphics[width=\columnwidth]{fig/sumplot.png}
 
 \begin{center}
-    \caption{A Sound wave}
+    \caption{Sum of terms}
 \end{center}
     
-    \label{fig:Sound Wave}
+    \label{fig:}
 \end{figure}
 
+
+\end{enumerate}
 \end{document}
