@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  19 FEB 2024 04:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  19 FEB 2024 04:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1374,38 +1374,17 @@ Overfull \hbox (11.33823pt too wide) in paragraph at lines 2--68
  []
 
 
-Overfull \hbox (5.91656pt too wide) detected at line 109
+Overfull \hbox (5.91656pt too wide) detected at line 107
 []
  []
 
 (./tables/table2.tex)
-
-LaTeX Warning: File `fig/generalterm.png' not found on input line 122.
-
-
-! Package pdftex.def Error: File `fig/generalterm.png' not found: using draft s
-etting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122 ...[width=\columnwidth]{fig/generalterm.png}
-                                                  
-? 
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-122.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <fig/sumplot.png, id=7, 462.528pt x 346.896pt>
 File: fig/sumplot.png Graphic file (type png)
 <use fig/sumplot.png>
-Package pdftex.def Info: fig/sumplot.png  used on input line 135.
+Package pdftex.def Info: fig/sumplot.png  used on input line 121.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1416,15 +1395,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  <./fig/sumplot.png>]
 (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39444 strings out of 476091
- 908610 string characters out of 5794082
- 1887330 words of memory out of 5000000
- 59006 multiletter control sequences out of 15000+600000
- 583106 words of font info for 177 fonts, out of 8000000 for 9000
+ 39369 strings out of 476091
+ 907185 string characters out of 5794082
+ 1888330 words of memory out of 5000000
+ 58948 multiletter control sequences out of 15000+600000
+ 582830 words of font info for 176 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,11n,96p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1433,14 +1415,13 @@ e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
 /public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
 onts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on main.pdf (2 pages, 75515 bytes).
+re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 71840 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 24 named destinations out of 1000 (max. 500000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
+ 25 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
