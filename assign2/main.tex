@@ -81,7 +81,7 @@ The z transform of the general term is
 \begin{align}
 X(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
 &=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
-&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} \hspace{1mm}; \quad \brak{z^{-1}}\neq 1\\
+&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} \hspace{1mm}; \quad |z|>1\\
 \end{align}
 On convolution for finding the sum
 \begin{align}
@@ -91,7 +91,7 @@ On z-transform,
 \begin{align}
 Y(z)&=X(z)\cdot U(z)\\
     &=\brak{\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}} \cdot \frac{1}{{1-z^{-1}}}\\
-  \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3} \hspace{1mm}; \quad \brak{z^{-1}}\neq 1\\
+  \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3} \hspace{1mm}; \quad \quad |z|>1\\
 \end{align}
 Using Contour integration to find the inverse z-transform,
 \begin{align}
@@ -105,13 +105,6 @@ We can observe there are three poles and thus m = 3,
     &=\frac{1}{2}\brak{1012+2310}\\
     \implies R&=1661
 \end{align}
-
-\begin{table}[h!]
-\centering
-\input{tables/table2}
-\vspace{0.5cm}
-\caption{\normalsize Results}
-\end{table}
 
 
 
