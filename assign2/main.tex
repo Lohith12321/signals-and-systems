@@ -71,17 +71,17 @@ Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term i
 Now, the $22^{nd}$ term means $x(21)$, so
 
 \begin{align}
-x(21) &= [x(0)+nd]u\brak 21\\
-149 &= [x(0)+21(7)]\brak 1\\
+x(21) &= \brak{x(0)+nd}u\brak 1\\
+149 &= \brak{x(0)+21\brak 7}\brak 1\\
 x(0) &= 2    
 \end{align}
 
 The general term is $x(n)=[2+7n]u\brak n$
-The z transform of the general term is 
+The $z$ transform of the general term is 
 \begin{align}
 X(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
 &=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
-&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} \hspace{1mm}; \quad |z|>1\\
+&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} ; \quad \abs z>1\\
 \end{align}
 On convolution for finding the sum
 \begin{align}
@@ -91,7 +91,7 @@ On z-transform,
 \begin{align}
 Y(z)&=X(z)\cdot U(z)\\
     &=\brak{\frac{{2+5z^{-1}}}{{(1-z^{-1})^2}}} \cdot \frac{1}{{1-z^{-1}}}\\
-  \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3} \hspace{1mm}; \quad \quad |z|>1\\
+  \implies Y(z)  &= \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3} ; \quad \quad \abs z>1\\
 \end{align}
 Using Contour integration to find the inverse z-transform,
 \begin{align}
@@ -105,9 +105,6 @@ We can observe there are three poles and thus m = 3,
     &=\frac{1}{2}\brak{1012+2310}\\
     \implies R&=1661
 \end{align}
-
-
-
 \begin{figure}[h]
     \centering  
 
