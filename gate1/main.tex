@@ -58,6 +58,12 @@
     where time $t$ is in seconds. If $x\brak t$ is the unit step input applied at $t = 0$ s to this system, the magnitude of the output at $t = 1$s is $\underline{\hspace{2cm}}$. (Round off the answer to two decimal places.)\\
     
 \solution
+\begin{table}[h!]
+\centering
+\input{tables/table}
+\vspace{0.5cm}
+\caption{\normalsize Parameters}
+\end{table}
     Given,
     \begin{align}
          \brak{0.01} \frac{d^2y\brak t}{dt^2} + \brak{0.2}\frac{dy\brak t }{dt} + y\brak t = 6x\brak t
@@ -94,7 +100,7 @@
     At $t=1s$ 
     \begin{align}
         y\brak 1 &=u\brak 1 \brak{6-66e^{-10}}\\
-        y\brak 1 &=6-66e^{-10}\\
+        y\brak 1 &=6-66e^{-10}
     \end{align}
     approximately,
     \begin{align}
@@ -102,4 +108,14 @@
     \end{align}
     \\
     $$\therefore  y\brak 1=5.99$$
+    \begin{figure}[h]
+    \centering  
+
+\includegraphics[width=\columnwidth]{fig/plot.png}
+
+    \centering
+    \caption{Plot of $y(t) = u(t) \cdot (6 - 66e^{-10t})$}
+
+    \label{fig:}
+\end{figure}
 \end{document}

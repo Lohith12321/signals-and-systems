@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  27 FEB 2024 07:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  27 FEB 2024 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,14 +1210,13 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 5.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 45.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 45.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -1328,6 +1327,8 @@ LaTeX Info: Redefining \ohm on input line 45.
 Package gensymb Info: Using \textohm for \ohm on input line 45.
 Package gensymb Info: Using \textmu for \micro on input line 45.
 Package hyperref Info: Link coloring OFF on input line 45.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1371,44 +1372,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
+(./tables/table.tex)
+Overfull \hbox (1.75897pt too wide) in paragraph at lines 2--65
+ [][] 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
 
  []
 
+<fig/plot.png, id=7, 722.7pt x 433.62pt>
+File: fig/plot.png Graphic file (type png)
+<use fig/plot.png>
+Package pdftex.def Info: fig/plot.png  used on input line 114.
+(pdftex.def)             Requested size: 252.0pt x 151.20026pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (./main.aux)
+ <./fig/plot.png>]
+(./main.aux)
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39294 strings out of 476091
- 906226 string characters out of 5794082
- 1881330 words of memory out of 5000000
- 58908 multiletter control sequences out of 15000+600000
- 569536 words of font info for 145 fonts, out of 8000000 for 9000
+ 39352 strings out of 476091
+ 906901 string characters out of 5794082
+ 1886330 words of memory out of 5000000
+ 58942 multiletter control sequences out of 15000+600000
+ 584146 words of font info for 178 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,10n,96p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,19n,96p,1172b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 50364 bytes).
+e/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on main.pdf (1 page, 77816 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
