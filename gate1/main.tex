@@ -73,11 +73,7 @@
         \mathcal{L}\left\{\frac{d^n y\brak t}{dt^n}\right\} = s^n Y\brak s - s^{n-1} y\brak 0 - \dots - y^{\brak{n-1}}\brak 0
     \end{align}
     Taking the Laplace transform of both sides (assuming zero initial conditions):
-    \begin{align}
-        0.01s^2Y\brak s + 0.2sY\brak s + Y\brak s = \mathcal{L}\{6x\brak t\}
-    \end{align}
-    The Laplace transform of $x\brak t$ is $X\brak s = \frac{1}{s}$, so 
-    \begin{align}
+   \begin{align}
         0.01s^2Y\brak s + 0.2sY\brak s + Y\brak s = \frac{6}{s}
     \end{align}
     \begin{align}
@@ -88,9 +84,9 @@
     \begin{align}
     Y\brak s = \frac{A}{s} + \frac{B}{s + 10} + \frac{C}{\brak {s + 10}^2}
     \end{align}
-    On solving, we get $A=6,B=-6,C=60$.\\
+    On solving, we get $A=6,B=-6,C=-60$.\\
     So,\begin{align}
-        Y\brak s = \frac{6}{s} - \frac{6}{s + 10} + \frac{60}{\brak {s + 10}^2}
+        Y\brak s = \frac{6}{s} - \frac{6}{s + 10} - \frac{60}{\brak {s + 10}^2}
     \end{align}
     Taking inverse Laplace transform of $Y\brak s$,
     \begin{align}
