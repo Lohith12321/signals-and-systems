@@ -88,14 +88,13 @@
     \begin{align}
     Y\brak s = \frac{A}{s} + \frac{B}{s + 10} + \frac{C}{\brak {s + 10}^2}
     \end{align}
-    On solving, we get $A=6,B=-6,C=-6$.\\
+    On solving, we get $A=6,B=-6,C=60$.\\
     So,\begin{align}
-        Y\brak s = \frac{6}{s} - \frac{6}{s + 10} - \frac{6}{\brak {s + 10}^2}
+        Y\brak s = \frac{6}{s} - \frac{6}{s + 10} + \frac{60}{\brak {s + 10}^2}
     \end{align}
     Taking inverse Laplace transform of $Y\brak s$,
     \begin{align}
-        y\brak t &= u\brak t \brak{6-6e^{-10t}-60e^{-10t}}\\
-        \implies y \brak t &=u \brak t \brak{6-66e^{-10t}}
+        y\brak t &= u\brak t \brak{6-6e^{-10t}-60te^{-10t}}
     \end{align}
     At $t=1s$ 
     \begin{align}
@@ -114,7 +113,7 @@
 \includegraphics[width=\columnwidth]{fig/plot.png}
 
     \centering
-    \caption{Plot of $y(t) = u(t) \cdot (6 - 66e^{-10t})$}
+    \caption{Plot of $y\brak t = u\brak t \brak{6-6e^{-10t}-60te^{-10t}}$}
 
     \label{fig:}
 \end{figure}

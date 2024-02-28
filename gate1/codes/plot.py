@@ -1,21 +1,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the function
-def y(t):
-    return np.heaviside(t, 1) * (6 - 66 * np.exp(-10 * t))
+# Define the time range
+t = np.linspace(0, 2, 1000)
 
-# Generate values for t
-t = np.linspace(-1, 5, 1000)
+# Define the unit step function
+u = np.heaviside(t, 1)
 
-# Calculate y values
-y_values = y(t)
+# Define the equation for y(t)
+y = u * (6 - 6*np.exp(-10*t) - 60*t*np.exp(-10*t))
 
-# Plot the function
+# Plot the graph
 plt.figure(figsize=(10, 6))
-plt.plot(t, y_values, label='y(t) = u(t) (6 - 66e^(-10t))')
+plt.plot(t, y, label='y(t)')
 plt.xlabel('t')
 plt.ylabel('y(t)')
 plt.grid(True)
-plt.savefig('plot.png')
+plt.legend()
 plt.show()
+plt.savefig('plot.png')
