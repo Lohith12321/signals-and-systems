@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  28 FEB 2024 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.3)  28 FEB 2024 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1373,14 +1373,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--59
  []
 
 (./tables/table.tex)
-Overfull \hbox (1.75897pt too wide) in paragraph at lines 2--65
+Overfull \hbox (1.75897pt too wide) in paragraph at lines 2--67
  [][] 
  []
 
 <fig/plot.png, id=7, 722.7pt x 433.62pt>
 File: fig/plot.png Graphic file (type png)
 <use fig/plot.png>
-Package pdftex.def Info: fig/plot.png  used on input line 114.
+Package pdftex.def Info: fig/plot.png  used on input line 116.
 (pdftex.def)             Requested size: 252.0pt x 151.20026pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1407,7 +1407,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 81893 bytes).
+Output written on main.pdf (1 page, 81916 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
