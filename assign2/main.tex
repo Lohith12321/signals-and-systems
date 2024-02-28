@@ -56,8 +56,6 @@
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-\begin{enumerate}
-\item
 Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term is 149.
 \solution
 
@@ -71,17 +69,21 @@ Find the sum of the first 22 terms of an AP in which $d = 7$ and the 22nd term i
 Now, the $22^{nd}$ term means $x(21)$, so
 
 \begin{align}
-x(21) &= \brak{x(0)+nd}u\brak 1\\
+x(21) &= \brak{x(0)+nd}u\brak {21}\\
 149 &= \brak{x(0)+21\brak 7}\brak 1\\
 x(0) &= 2    
 \end{align}
-
-		The general term is $x(n)=\brak {2+7n}u\brak n$
+The standard $z$ transforms,
+\begin{align}
+    u \brak n &\stackrel{z}{\longleftrightarrow} \frac{1}{1-z^{-1}}, \abs z >1\\
+   n u\brak n &\stackrel{z}{\longleftrightarrow} \frac{z^{-1}}{\brak{1-z^{-1}}^2}, \abs z >1
+\end{align}
+The general term is $x(n)=\brak {2+7n}u\brak n$,
 The $z$ transform of the general term is 
 \begin{align}
 X(z)&= \frac{x(0)}{1-z^{-1}}+\frac{dz^{-1}}{\brak{1-z^{-1}}^2} \\
 &=\frac{2}{1-z^{-1}}+\frac{7z^{-1}}{{\brak{1-z^{-1}}^2}}\\
-&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} ; \quad \abs z>1\\
+&=\frac{2+5z^{-1}}{\brak{1-z^{-1}}^2} ; \quad \abs z>1
 \end{align}
 On convolution for finding the sum
 \begin{align}
@@ -95,15 +97,15 @@ Y(z)&=X(z)\cdot U(z)\\
 \end{align}
 Using Contour integration to find the inverse z-transform,
 \begin{align}
-    Y(z)&=\oint_c y(z)\cdot z^{n-1}dz\\
-    Y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
+    y(n)&=\oint_c Y(z)\cdot z^{n-1}dz\\
+    y(21)&=\oint_c \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot z^{20}dz
 \end{align}
 We can observe there are three poles and thus m = 3,
 \begin{align}
-    R&=\frac{1}{\brak{n-1}!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}}\brak{\brak{z-a}^mf\brak z}\\
+    y\brak{21}&=\frac{1}{\brak{m-1}!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}}\brak{\brak{z-a}^mf\brak z}\\
     &=\frac{1}{2!}\lim_{z \to 1} \frac{d^2}{dz^2} \brak{\brak{z-1}^3\cdot \frac{2+5z^{-1}}{\brak{1-z^{-1}}^3}\cdot \brak{z^{20}}}\\
     &=\frac{1}{2}\brak{1012+2310}\\
-    \implies R&=1661
+    \implies y \brak{21}&=1661
 \end{align}
 \begin{figure}[h]
     \centering  
@@ -111,12 +113,9 @@ We can observe there are three poles and thus m = 3,
 \includegraphics[width=\columnwidth]{fig/plot.png}
 
 \begin{center}
-    \caption{Sum of terms}
+    \caption{Simulation v/s theoretical}
 \end{center}
     
     \label{fig:}
 \end{figure}
-
-
-\end{enumerate}
 \end{document}
