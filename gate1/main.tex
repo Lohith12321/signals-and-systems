@@ -88,9 +88,15 @@
     So,\begin{align}
         Y\brak s = \frac{6}{s} - \frac{6}{s + 10} - \frac{60}{\brak {s + 10}^2}
     \end{align}
+    From standard onverse laplace transforms:
+    \begin{align}
+	    \frac{1}{s+a}   &{\longleftrightarrow}    e^{-at}\\
+	    \frac{1}{\brak{s+a}^2}  &{\longleftrightarrow }  te^{-at}
+    \end{align}	    
+	    
     Taking inverse Laplace transform of $Y\brak s$,
     \begin{align}
-        y\brak t &= u\brak t \brak{6-6e^{-10t}-60te^{-10t}}
+	    y\brak t &= u\brak{t} \brak{6-6e^{-10t}-60te^{-10t}}
     \end{align}
     At $t=1s$ 
     \begin{align}
@@ -99,11 +105,10 @@
     \end{align}
     approximately,
     \begin{align}
-        y\brak 1 &=5.99
+	    \implies y\brak{1} =5.99
     \end{align}
-    \\
-    $$\therefore  y\brak 1=5.99$$
-    \begin{figure}[h]
+    
+   \begin{figure}[h]
     \centering  
 
 \includegraphics[width=\columnwidth]{fig/plot.png}
