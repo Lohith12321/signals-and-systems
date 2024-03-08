@@ -21,5 +21,5 @@ ax2.grid(True)
 
 # Adjust layout and save the plot
 plt.tight_layout()
-plt.savefig("plot.png")
+plt.savefig('plot.png')
 plt.show()
