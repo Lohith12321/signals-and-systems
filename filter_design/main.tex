@@ -17,6 +17,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
+\usepackage{hyperref}
 \usepackage{gvv}        
 
 \begin{document}
@@ -49,20 +50,15 @@ where $\sigma$ is the sum of digits of roll number and r is roll number.
 substituting $j=4$ gives the pass band range for our band pass filter as $6.4$ kHz - $7.6$ kHz.  Hence, the un-normalized discrete time filter pass band frequencies are $F_{p1} = 6.4$ kHz and $F_{p2}=7.6$ kHz.\\
 The corresponding normalized digital filter pass band frequencies are
 \begin{align}
-    \omega_{p1} &= 2\pi\frac{F_{p1}}{F_s} = \pi\\
-    \omega_{p2} &= 2\pi\frac{F_{p2}}{F_s}  =\pi
+    \omega_{p1} &= 2\pi\frac{F_{p1}}{F_s} = 0.317\pi\\
+    \omega_{p2} &= 2\pi\frac{F_{p2}}{F_s}  =0.292\pi
 \end{align}
-\item[2.] \textbf{Tolerances:} The pass band ($\delta_1$) and stop band ($\delta_2$) tolerances are given to
-be equal, so let them be $\delta_1 = \delta_2 = \delta = 0.15$.\\
-\item[3.] \textbf{Stop band:} The {transition band} for band pass filters is $\Delta F = 0.3$ kHz on either side of the pass band.
-\begin{align}
-    F_{s1} &=6.4-0.3 = 6.1 \text{KHz}\\
-    F_{s2} &=7.6+0.3 = 7.9  \text{KHz}
-\end{align}
-\begin{align}
-    \omega_{s1} &= 2\pi\frac{F_{s1}}{F_s} = \pi\\
-    \omega_{s2} &= 2\pi\frac{F_{s2}}{F_s} = \pi\\
-\end{align}
+\item[2.] \textbf{Tolerances:} 
+ The pass band ($\delta_1$) and stop band ($\delta_2$) tolerances are given to
+be equal, so we let $\delta_1 = \delta_2 = \delta = 0.15$.\\
+\item[3.] \textbf{Stop band:}The {\em transition band} for bandpass filters is $\Delta F = 0.3$ kHz on either side of the passband.
+Hence, the un-normalized {\em stopband} frequencies are $F_{s1} = 7.6 + 0.3 = 7.9$ kHz and $F	_{s2} = 6.4 - 0.3 = 6.1$ kHz.  The corresponding normalized frequencies are $\omega_{s1} = 0.329 \pi$  and $\omega_{s2} =  0.254 \pi$.
+\end{enumerate}
 \subsection{\textbf{The filter design:}}
 In the bi-linear transform, the analog filter frequency ($\Omega$) is related to the corresponding digital filter frequency\brak{\omega} :
 \begin{align}
@@ -72,25 +68,25 @@ Using this relation, we obtain the analog pass band and stop band frequencies as
 $\Omega_{p1} = 0.5913$, $\Omega_{p2} = 0.702$ and $\Omega_{s1} = 0.5662$, $\Omega_{s2} = 0.7361$
 respectively.
 \section{ The IIR Filter Design:}
-We are supposed to design filters whose stopband is monotonic and passband equiripple. Hence, we use the Chebyschev approximation to design our bandpass IIR filter.
+We are supposed to design filters whose stop band is monotonic and pass band equi-ripple. Hence, we use the Chebyschev approximation to design our band pass IIR filter.
 \subsection{The analog filter:}
 \begin{itemize}
-    \item[(i)] Low Pass Filter Specifications: Let $H_{a, BP}(j\Omega)$ be the desired analog bandpass filter,  with the specifications provided in Section 2.2, and $H_{a,LP}(j\Omega_L)$ be the equivalent low pass filter, then
+    \item[(i)] Low Pass Filter Specifications: Let $H_{a, BP}(j\Omega)$ be the desired analog band pass filter,  with the specifications provided in Section 2.2, and $H_{a,LP}(j\Omega_L)$ be the equivalent low pass filter, then
 \begin{equation}
 \Omega_L = \frac{\Omega^2 - \Omega_0^2}{B\Omega} \label{eq:freq_transform}
 \end{equation}
-where $\Omega_0 = \sqrt{\Omega_{p1}\Omega_{p2}} =-------$ and $B = \Omega_{p2} - \Omega_{p1} = --------$.
+where $\Omega_0 = \sqrt{\Omega_{p1}\Omega_{p2}} =0.49167$ and $B = \Omega_{p2} - \Omega_{p1} == 0.0977$.
 
-Substituting $\Omega_{s1}$ and $\Omega_{s2}$ in \eqref{eq:freq_transform} we obtain the stopband edges of lowpass filter 
+Substituting $\Omega_{s1}$ and $\Omega_{s2}$ in \eqref{eq:freq_transform} we obtain the stop band edges of low pass filter 
 \begin{align}
-    \Omega_{Ls1} &= \frac{\Omega_{s1}^2 - \Omega_0^2}{B\Omega_{s1}} =-----------\\
-    \Omega_{Ls2} &= \frac{\Omega_{s2}^2 - \Omega_0^2}{B\Omega_{s2}} =-----------.
+    \Omega_{Ls1} &= \frac{\Omega_{s1}^2 - \Omega_0^2}{B\Omega_{s1}} = 1.4689\\
+    \Omega_{Ls2} &= \frac{\Omega_{s2}^2 - \Omega_0^2}{B\Omega_{s2}} = -1.5459
 \end{align}
-And we choose the minimum of these two stopband edges
+And we choose the minimum of these two stop band edges
 \begin{align}
-    \Omega_{Ls} = \mbox{min}(\vert \Omega_{Ls_1}\vert,\vert \Omega_{Ls_2}\vert) =--------.
+    \Omega_{Ls} = \mbox{min}(\vert \Omega_{Ls_1}\vert,\vert \Omega_{Ls_2}\vert) = 1.4689.
 \end{align}
-\item[(ii)] {The Low Pass Chebyschev Filter Paramters:} The magnitude of frequency response of the low pass filter is given by 
+\item[(ii)] {The Low Pass Chebyschev Filter Parameters:} The magnitude of frequency response of the low pass filter is given by 
 \begin{align}
     \vert H_{a,LP}(j\Omega_L)\vert^2 = \frac{1}{1 + \epsilon^2c_N^2(\Omega_L/\Omega_{Lp})} \label{eq:mag_freq_response}
 \end{align}
@@ -119,10 +115,10 @@ where $D_1 = \frac{1}{(1 - \delta)^2}-1$ and $D_2 = \frac{1}{\delta^2} - 1$ and 
 \\
 \input{tables/table1}
 we get $N\geq 4$ and $0.278 \leq \epsilon \leq 0.61$\\
-The below code plots \eqref{eq:mag_freq_response} for different values of $\epsilon$ .\\
-\begin{lstlisting}
------------------------------------------------
-\end{lstlisting}
+The below c-code generates the text file and python code plots \eqref{eq:mag_freq_response} for different values of $\epsilon$ .\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot1.c}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot1.c}
+python code:\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot1.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot1.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot1.png}
@@ -149,10 +145,11 @@ where $k$ is the index of the pole and \\
     A_k &= \brak{2k+1}\frac{\pi}{2N}\\
     B_k &= \frac{1}{N} \sinh^{-1}\brak{\frac{1}{\epsilon}}
 \end{align}
-The below code computes the values of $s_k$ and stores it in a text file.
-\begin{lstlisting}
-    ------------------------------------------
-\end{lstlisting}
+The below code computes the values of $s_k$ and stores it in a text file.\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot2.c}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot2.c}
+python code for plotting\\
+
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot2.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot2.py}\\
 The poles obtained are formulated in the table below:
 \input{tables/table2}
 The below code plots the pole-zero plot.
@@ -177,6 +174,8 @@ Substituting respective values in \eqref{eq:eq2} we get $G_{LP}=0.3125$
      H_{a,LP}(s_L) &= \frac{0.3125}{\brak{s_L-s_5}\brak{s_L-s_6}\brak{s_L-s_7}\brak{s_L-s_8}}\\
      &= \frac{0.3125}{s^4 + 1.1068s^3 + 1.61245s^2 + 0.91397s + 0.33656}\label{eq:design}
 \end{align}
+code for plotting for Band-pass filter\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot3.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot3.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot3.png}
@@ -207,6 +206,8 @@ The expressions in the s-domain and gain factors are computed by writing a Pytho
 In Figure 3, we plot $\vert H_{a,BP}(j\Omega)\vert$ as a function of $\Omega$ for both positive as
 well as negative frequencies.  We find that the pass band and stop band frequencies in the figure
 match well with those obtained analytically through the bi-linear transformation.
+Code:\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot4.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot4.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot4.png}
@@ -223,14 +224,15 @@ Substituting $s=\frac{1-z^{-1}}{1+z^{-1}}$ in \eqref{eq:eq5} and calculating exp
 \begin{align}
     H_{d,BP}(z) &= \frac{G\brak{z^{-8} - 4z^{-6} + 6z^{-4} - 4z^{-2} + 1.0}}{2.61 - 12.43z^{-1} + 32.16z^{-2} - 53.24z^{-3} + 61.99z^{-4} - 50.98z^{-5} + 29.48z^{-6} - 10.91z^{-7} + 2.19z^{-8}}
 \end{align}
-where $G=9.8138\times 10^{-5}$    
+where $G=9.8138\times 10^{-5}$   
+Code for the plotting Digital Band pass filter\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot5.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot5.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot5.png}
 \caption{Digital Specifications are met. Pass band and stop band frequencies are same}
 \label{fig:Digital_BPF}
 \end{figure}
-\end{enumerate}
 \section{The FIR Filter}
 We design the FIR filter by first obtaining the (non-causal) low pass equivalent using the Kaiser window and then converting it to a causal band pass filter.
 \subsection{The Equivalent Low pass Filter}
@@ -240,6 +242,8 @@ The stop band tolerance is $\delta=0.15$.The cutoff-frequency is given by :
     \omega_{l} &= \frac{\omega_{p1}-\omega_{p2}}{2}\\
                 &= 0.025\pi
 \end{align}
+Code:\\
+\fbox{\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot6.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot6.py}}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot6.png}
@@ -298,6 +302,8 @@ Therefore the desired impulse response is :
     0 &\text{otherwise}
 \end{cases} \label{eq:h(n)-desired_for_LPF}
 \end{align}
+Code:\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot7.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot7.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot7.png}
@@ -327,7 +333,8 @@ Multipying by window function we get :
     0 &\text{otherwise}
 \end{cases} \label{eq:h_BP(n)desired_for_LPF}
 \end{align}
-
+Code:\\
+\href{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot8.py}{https://github.com/Lohith12321/signals-and-systems/blob/main/filter_design/codes/plot8.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot8.png}
